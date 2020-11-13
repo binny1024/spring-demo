@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--    scope 默认单例模式,在该模式下,加该载配置文件的时候,就会创建一个bean的实例对象,每次getBean的时候,都会取该唯一对象   -->
+    <bean id="userBean" class="com.plant.grass.bean.UserBean"/>
+    <!--    多例模式下,bean只会在调用getBean的时候创建,即什么时候用,什么时候创建-->
+    <bean id="userBean1" class="com.plant.grass.bean.UserBean" scope="prototype"/>
+
+    <!--    通过静态对象获取bea,直接通过class 执行的类调用 factory-method 指定的静态方法 -->
+    <bean id="userBean2" class="com.plant.grass.factory.StaticFactory" factory-method="getUserBean" scope="prototype"/>
+
+    <!--    通过动态工厂获取对象,先用过factory-bean得到 工厂对象,然后调用factory-method指定的方法-->
+    <bean id="factory" class="com.plant.grass.factory.DynamicFactory"/>
+    <!--   通过 factory-bean  得到工厂的实例对象 -->
+    <bean id="userBean3" factory-bean="factory" factory-method="getUserBean"/>
+
+</beans>

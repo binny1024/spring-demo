@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+    <bean id="book0" class="com.plant.grass.bean.Book">
+        <property name="name" value="西游记"/>
+        <property name="price" value="200.98"/>
+    </bean>
+    <bean id="book1" class="com.plant.grass.bean.Book">
+        <property name="name" value="水浒传"/>
+        <property name="price" value="200.98"/>
+    </bean>
+    <bean id="book2" class="com.plant.grass.bean.Book">
+        <property name="name" value="三国演义"/>
+        <property name="price" value="200.98"/>
+    </bean>
+    <bean id="book3" class="com.plant.grass.bean.Book">
+        <property name="name" value="红楼梦"/>
+        <property name="price" value="200.98"/>
+    </bean>
+
+</beans>
