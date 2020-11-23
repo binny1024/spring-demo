@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+                            http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd">
+
+    <!--    配置目标对象-->
+    <bean id="target" class="com.aop.demo.Target"/>
+    <!--    配置入侵的逻辑类-->
+    <bean id="myAspect" class="com.aop.demo.MyAspect"/>
+    <!--    配置增强方法,如何增强-->
+    <aop:config>
+        <!-- 声明切面-->
+        <aop:aspect ref="myAspect">
+            <!--            抽取切点表达式-->
+            <aop:pointcut id="save" expression="execution(public void com.aop.demo.Target.save())"/>
+            <!--            这行配置的意思就是,在执行pointcut 之前要执行的方法 -->
+            <aop:before method="before" pointcut="execution(public void com.aop.demo.Target.save())"/>
+            <aop:before method="before" pointcut-ref="save"/>
+            <!--            这行配置的意思就是,在执行pointcut 之后要执行的方法 -->
+            <aop:after method="after" pointcut="execution(public void com.aop.demo.Target.save())"/>
+            <!--            <aop:around method="around" pointcut="execution(public void com.aop.demo.Target.save())"/>-->
+            <!--            <aop:after-throwing method="afterThrowing" pointcut="execution(public void com.aop.demo.Target.save())"/>-->
+            <!--            <aop:after-returning method="afterReturning" pointcut="execution(public void com.aop.demo.Target.save())"/>-->
+        </aop:aspect>
+    </aop:config>
+</beans>

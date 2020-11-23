@@ -26,10 +26,10 @@ public class SpringDemoTest {
    */
   @Test
   public void beans() {
-    ApplicationContext app = new ClassPathXmlApplicationContext("applicationContext.xml");
-    UserBean userBean = (UserBean) app.getBean("UserDaoMany");
+    ApplicationContext app = new ClassPathXmlApplicationContext("applicationContext-User.xml");
+    UserBean userBean = (UserBean) app.getBean("userBean");
     userBean.save();
-    userBean = (UserBean) app.getBean("UserDaoMany");
+    userBean = (UserBean) app.getBean("userBean");
     userBean.save();
   }
 
