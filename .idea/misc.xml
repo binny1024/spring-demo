@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
+  <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="web" url="file://$PROJECT_DIR$/interceptor" />
+    <file type="web" url="file://$PROJECT_DIR$/mvc" />
+    <file type="web" url="file://$PROJECT_DIR$/mvc-web" />
+    <file type="web" url="file://$PROJECT_DIR$/pro_01" />
+    <file type="web" url="file://$PROJECT_DIR$/servlet" />
+    <file type="web" url="file://$PROJECT_DIR$/servlet3.0" />
+    <file type="web" url="file://$PROJECT_DIR$/tx" />
+    <file type="web" url="file://$PROJECT_DIR$/tx-anno" />
+  </component>
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/tx/pom.xml" />
+        <option value="$PROJECT_DIR$/aop/pom.xml" />
+        <option value="$PROJECT_DIR$/ioc/pom.xml" />
+        <option value="$PROJECT_DIR$/mvc/pom.xml" />
+        <option value="$PROJECT_DIR$/anno/pom.xml" />
+        <option value="$PROJECT_DIR$/jdbc/pom.xml" />
+        <option value="$PROJECT_DIR$/mvc-web/pom.xml" />
+        <option value="$PROJECT_DIR$/my-anno/pom.xml" />
+        <option value="$PROJECT_DIR$/tx-anno/pom.xml" />
+        <option value="$PROJECT_DIR$/ioc-anno/pom.xml" />
+        <option value="$PROJECT_DIR$/interceptor/pom.xml" />
+        <option value="$PROJECT_DIR$/servlet3/pom.xml" />
+        <option value="$PROJECT_DIR$/pro_01/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" project-jdk-name="1.8" project-jdk-type="JavaSDK" />
+</project>
